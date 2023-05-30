@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.container{
+    @apply max-w-[100rem] mx-auto p-[1rem];
+}
+
+@layer components{
+
+    /** ---------- HEADER ---------- */
+
+    .header{
+        @apply bg-light shadow-[0_0_10px_0_rgba(0,0,0,0.1)] z-[1];
+    }
+
+    .header__wrapper{
+        @apply relative flex items-center justify-between max-w-[100rem] mx-auto p-[1rem] z-[1]
+    }
+
+    .branding{
+        @apply flex items-center
+    }
+
+    .branding img{
+        @apply w-[10rem]
+    }
+
+    .header-2{
+        @apply hidden lg:flex lg:bg-lblue
+    }
+
+    .header__nav{
+        @apply flex items-center justify-between max-w-[100rem] mx-auto p-[1rem]; 
+    }
+
+    .desktop-nav ul{
+        @apply flex
+    }
+
+    .desktop-nav ul li{
+        @apply text-light
+    }
+
+    .desktop__social ul{
+        @apply flex
+    }
+
+    .header__nav__container{
+        @apply lg:bg-lblue
+    }
+
+    .header__actions{
+        @apply absolute top-[3rem] w-[50%] left-[-20rem] h-[100vh] transition-all z-[-1] overflow-y-scroll lg:relative lg:overflow-visible lg:top-0 lg:left-[50rem] lg:h-0 lg:flex lg:flex-row-reverse;
+    }
+
+    .header__actions.open{
+        @apply left-0 shadow-[0_0_10px_0_rgba(0,0,0,0.1)] transition-all
+    }
+
+    .header__actions ul{
+        @apply border-t-[1px] border-grey cursor-pointer pt-[2rem] lg:flex lg:border-none
+    }
+
+    .header__actions ul li{
+        @apply relative mb-[.2rem] py-[1rem]
+    }
+
+    .header__actions ul li:first-child, .header__actions ul li:nth-child(6){
+        @apply px-[1.5rem]
+    }
+
+    .header__actions ul li a{
+        @apply text-[.9rem] text-dark
+    }
+
+    .header__actions ul li h4{
+        @apply flex items-center justify-between px-[1.5rem] text-[.9rem] text-dark lg:px-0
+    }
+
+    .header__actions ul li h4 i{
+        @apply text-[.7rem] text-dark lg:hidden
+    }
+
+    .header__actions i{
+        @apply text-light transition ease-linear duration-300;
+    }
+
+    .header__actions i.open{
+        @apply transition ease-linear duration-300 rotate-[180deg];
+    }
+
+    .drop-down-item{
+        @apply max-h-0 overflow-hidden transition ease-linear duration-300
+    }
+
+    .drop-down-item.open{
+        @apply max-h-[100%] transition ease-linear duration-300
+    }
+
+    .drop-down-item ul{
+        @apply pt-[.5rem] px-[1rem]
+    }
+
+    .drop-down-item ul li{
+        @apply py-[.5rem]
+    }
+
+    .drop-down-item ul li:first-child{
+        @apply px-[0]
+    }
+
+    .drop-down-item ul li a{
+        @apply px-[1.5rem] lg:px-0
+    }
+
+    .item__content h3{
+        @apply px-[1.5rem] py-[.5rem] text-[1.3rem] text-primary border-b-[1px] lg:px-0
+    }
+
+    .item__content h3:nth-child(3){
+        @apply mt-[1rem]
+    }
+
+    .item__content ul{
+        @apply py-[.2rem] px-[1rem] lg:px-0
+    }
+
+    .item__content ul li:nth-child(6){
+        @apply px-[0]
+    }
+
+    .mob-social ul{
+        @apply flex items-center px-[3.5rem] py-[2rem]
+    }
+
+    .mob-social ul li{
+        @apply mr-[1rem]
+    }
+
+    .toggle__menu{
+        @apply cursor-pointer lg:hidden
+    }
+
+    .toggle__menu.open span{
+        @apply z-10 bg-dark
+    }
+
+    .toggle__menu span{
+        @apply w-[1.5rem] h-[.2rem] mr-[1rem] bg-dark block transition ease-in-out duration-500
+    }
+
+    .toggle__menu span:nth-child(2){
+        @apply my-[.4rem]
+    }
+
+    .toggle__menu.open span:first-child{
+        @apply w-[1rem] translate-x-[-3px] rotate-[-210deg] transition ease-in-out duration-500;
+    }
+
+    .toggle__menu.open span:nth-child(2){
+        @apply my-[0] h-[.25rem] transition ease-in-out duration-500;
+    }
+
+    .toggle__menu.open span:last-child{
+        @apply w-[1rem] translate-x-[-3px] rotate-[210deg] transition ease-in-out duration-500;
+    }
+
+    .burger__menu{
+        @apply cursor-pointer lg:hidden
+    }
+
+    .burger__menu.open span{
+        @apply bg-dark
+    }
+
+    .burger__menu span{
+        @apply w-[.3rem] h-[.3rem] mr-[1rem] rounded-full bg-dark block transition ease-in-out duration-500
+    }
+
+    .burger__menu span:nth-child(2){
+        @apply my-[.2rem]
+    }
+
+    .burger__menu.open span:first-child{
+        @apply w-[.25rem] h-[.25rem] translate-y-[1rem] transition ease-in-out duration-500;
+    }
+
+    .burger__menu.open span:nth-child(2){
+        @apply w-[.25rem] h-[.25rem] my-[.25rem] transition ease-in-out duration-500;
+    }
+
+    .burger__menu.open span:last-child{
+        @apply w-[.25rem] h-[.25rem] translate-y-[-1rem] transition ease-in-out duration-500;
+    }
+
+    .header__contact{
+        @apply absolute top-[-100rem] right-0 bg-light shadow-[0_0_22px_-4px_rgba(0,0,0,0.17)] lg:relative lg:top-0 lg:shadow-none lg:flex lg:items-center
+    }
+
+    .header__contact.open{
+        @apply top-[3.5rem] px-[1.5rem] py-[2rem] z-[-1]
+    }
+
+    .header__contact p{
+        @apply mb-[.5rem] lg:mb-0
+    }
+
+    .header__contact i{
+        @apply text-[1.2rem] text-primary mr-[1rem]
+    }
+
+    .header__contact p:nth-child(2){
+        @apply mb-[2.5rem] lg:mb-0 lg:mx-[2rem] lg:border-l-[1px] lg:pl-[2rem]
+    }
+
+    .header__contact a{
+        @apply py-[.8rem] px-[2rem] border-[2px] border-primary
+    }
+}
