@@ -19,6 +19,7 @@
         @apply relative flex items-center justify-between max-w-[100rem] mx-auto p-[1rem] z-[1]
     }
 
+
     .branding{
         @apply flex items-center
     }
@@ -27,13 +28,6 @@
         @apply w-[10rem]
     }
 
-    .header-2{
-        @apply hidden lg:flex lg:bg-lblue
-    }
-
-    .header__nav{
-        @apply flex items-center justify-between max-w-[100rem] mx-auto p-[1rem]; 
-    }
 
     .desktop-nav ul{
         @apply flex
@@ -47,89 +41,66 @@
         @apply flex
     }
 
+
     .header__nav__container{
         @apply lg:bg-lblue
     }
 
+
     .header__actions{
-        @apply absolute top-[3rem] w-[50%] left-[-20rem] h-[100vh] transition-all z-[-1] overflow-y-scroll lg:relative lg:overflow-visible lg:top-0 lg:left-[50rem] lg:h-0 lg:flex lg:flex-row-reverse;
+        @apply bg-white lg:bg-transparent duration-500 absolute flex flex-col h-screen overflow-y-scroll left-[-100rem] overflow-hidden text-center lg:relative lg:overflow-visible lg:h-[100%] lg:flex-row-reverse lg:items-center lg:justify-between lg:w-full lg:max-w-[70rem] lg:mx-auto lg:left-0 transition-all;
     }
-
-    .header__actions.open{
-        @apply left-0 shadow-[0_0_10px_0_rgba(0,0,0,0.1)] transition-all
-    }
-
     .header__actions ul{
-        @apply border-t-[1px] border-grey cursor-pointer pt-[2rem] lg:flex lg:border-none
+        @apply lg:flex transition-all;
     }
-
     .header__actions ul li{
-        @apply relative mb-[.2rem] py-[1rem]
+        @apply my-1 lg:my-0 lg:border-t-4 lg:border-transparent lg:hover:border-primary transition-all;
     }
-
-    .header__actions ul li:first-child, .header__actions ul li:nth-child(6){
-        @apply px-[1.5rem]
-    }
-
     .header__actions ul li a{
-        @apply text-[.9rem] text-dark
+        @apply  hover:text-white lg:text-white  transition-all;
+    }
+    .header__actions ul li a{
+        @apply hover:bg-primary lg:hover:bg-slate-600;
+    }
+    .header__actions ul li:hover .dropdown{
+        @apply lg:overflow-visible lg:top-[3.8rem] lg:max-h-[40rem] opacity-100 transition-all;
+    }
+    .header__actions ul li:first-child{
+        @apply lg:border-primary;
+    }
+    .header__actions ul li a{
+        @apply flex items-center justify-between p-4;
+    }
+    .header__actions ul li a i{
+        @apply lg:hidden;
+    }
+    .header__actions.open{
+        @apply duration-500 top-[4rem] left-0  transition-all lg:top-0;
     }
 
-    .header__actions ul li h4{
-        @apply flex items-center justify-between px-[1.5rem] text-[.9rem] text-dark lg:px-0
+
+    .dropdown{
+        @apply max-h-0 bg-white overflow-hidden transition-all lg:absolute lg:top-[6rem] lg:overflow-hidden lg:opacity-0 lg:max-h-0 lg:text-dark lg:flex duration-500;
+    }
+    .dropdown__item{
+        @apply lg:mx-[1rem];
+    }
+    .dropdown h4{
+        @apply text-[2rem] text-left text-[#50ba87] mx-3 border-b-2 lg:border-transparent;
+    }
+    .dropdown ul{
+        @apply flex-col m-3;
+    }
+    .dropdown ul li{
+        @apply lg:border-t-0 ;
+    }
+    .dropdown ul li a{
+        @apply h-[1rem] lg:text-dark lg:hover:bg-transparent lg:translate-x-1 lg:hover:translate-x-0 lg:hover:text-dark lg:border-transparent lg:border-l-4 lg:hover:border-primary;
+    }
+    .dropdown.open{
+        @apply max-h-full transition-all lg:hidden;
     }
 
-    .header__actions ul li h4 i{
-        @apply text-[.7rem] text-dark lg:hidden
-    }
-
-    .header__actions i{
-        @apply text-light transition ease-linear duration-300;
-    }
-
-    .header__actions i.open{
-        @apply transition ease-linear duration-300 rotate-[180deg];
-    }
-
-    .drop-down-item{
-        @apply max-h-0 overflow-hidden transition ease-linear duration-300
-    }
-
-    .drop-down-item.open{
-        @apply max-h-[100%] transition ease-linear duration-300
-    }
-
-    .drop-down-item ul{
-        @apply pt-[.5rem] px-[1rem]
-    }
-
-    .drop-down-item ul li{
-        @apply py-[.5rem]
-    }
-
-    .drop-down-item ul li:first-child{
-        @apply px-[0]
-    }
-
-    .drop-down-item ul li a{
-        @apply px-[1.5rem] lg:px-0
-    }
-
-    .item__content h3{
-        @apply px-[1.5rem] py-[.5rem] text-[1.3rem] text-primary border-b-[1px] lg:px-0
-    }
-
-    .item__content h3:nth-child(3){
-        @apply mt-[1rem]
-    }
-
-    .item__content ul{
-        @apply py-[.2rem] px-[1rem] lg:px-0
-    }
-
-    .item__content ul li:nth-child(6){
-        @apply px-[0]
-    }
 
     .mob-social ul{
         @apply flex items-center px-[3.5rem] py-[2rem]
@@ -138,6 +109,7 @@
     .mob-social ul li{
         @apply mr-[1rem]
     }
+
 
     .toggle__menu{
         @apply cursor-pointer lg:hidden
@@ -167,6 +139,7 @@
         @apply w-[1rem] translate-x-[-3px] rotate-[210deg] transition ease-in-out duration-500;
     }
 
+
     .burger__menu{
         @apply cursor-pointer lg:hidden
     }
@@ -188,19 +161,20 @@
     }
 
     .burger__menu.open span:nth-child(2){
-        @apply w-[.25rem] h-[.25rem] my-[.25rem] transition ease-in-out duration-500;
+        @apply w-[.25rem] h-[.25rem] my-[.4rem] transition ease-in-out duration-500;
     }
 
     .burger__menu.open span:last-child{
         @apply w-[.25rem] h-[.25rem] translate-y-[-1rem] transition ease-in-out duration-500;
     }
 
+
     .header__contact{
         @apply absolute top-[-100rem] right-0 bg-light shadow-[0_0_22px_-4px_rgba(0,0,0,0.17)] lg:relative lg:top-0 lg:shadow-none lg:flex lg:items-center
     }
 
     .header__contact.open{
-        @apply top-[3.5rem] px-[1.5rem] py-[2rem] z-[-1]
+        @apply top-[3.5rem] px-[1.5rem] py-[2rem] z-[-1] lg:relative lg:top-0 lg:px-0 lg:py-0
     }
 
     .header__contact p{
