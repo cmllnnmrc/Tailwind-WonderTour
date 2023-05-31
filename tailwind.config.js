@@ -19,6 +19,12 @@ module.exports = {
         'lg': '1024px',
         'xl': '1920'
       },
+
+      backgroundImage: {
+        'banner-1': 'url("./wonder-img/banner-img1.jpg")',
+        'banner-2': 'url("./wonder-img/banner-img2.jpg")',
+        'banner-3': 'url("./wonder-img/banner-img3.jpg")',
+      }
     },
   },
   plugins: [],

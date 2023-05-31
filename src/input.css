@@ -7,16 +7,28 @@
     @apply max-w-[100rem] mx-auto p-[1rem];
 }
 
+.tns-nav{
+    @apply absolute z-[1] right-0 top-[50%] lg:right-[10rem]
+}
+
+.tns-nav button{
+    @apply bg-grey w-[.8rem] h-[.8rem] m-[.5rem] flex hover:bg-light focus:bg-primary
+}
+
+.tns-nav .tns-nav-active{
+    @apply bg-primary
+}
+
 @layer components{
 
     /** ---------- HEADER ---------- */
 
     .header{
-        @apply bg-light shadow-[0_0_10px_0_rgba(0,0,0,0.1)] z-[1];
+        @apply bg-light shadow-[0_0_10px_0_rgba(0,0,0,0.1)] z-[999];
     }
 
     .header__wrapper{
-        @apply relative flex items-center justify-between max-w-[100rem] mx-auto p-[1rem] z-[1]
+        @apply relative flex items-center justify-between max-w-[100rem] mx-auto px-[1rem] py-[1.1rem] lg:py-[2rem];
     }
 
 
@@ -29,85 +41,115 @@
     }
 
 
-    .desktop-nav ul{
-        @apply flex
-    }
-
-    .desktop-nav ul li{
-        @apply text-light
-    }
-
-    .desktop__social ul{
-        @apply flex
-    }
-
-
     .header__nav__container{
         @apply lg:bg-lblue
     }
 
 
     .header__actions{
-        @apply bg-white lg:bg-transparent duration-500 absolute flex flex-col h-screen overflow-y-scroll left-[-100rem] overflow-hidden text-center lg:relative lg:overflow-visible lg:h-[100%] lg:flex-row-reverse lg:items-center lg:justify-between lg:w-full lg:max-w-[70rem] lg:mx-auto lg:left-0 transition-all;
+        @apply bg-light duration-500 absolute flex flex-col h-[100vh] w-[60%] overflow-y-scroll left-[-100rem] overflow-hidden text-center lg:text-center lg:bg-transparent lg:relative lg:overflow-visible lg:h-[100%] lg:flex-row-reverse lg:items-center lg:justify-between lg:w-full lg:max-w-[100rem] lg:mx-auto lg:left-0 transition-all;
     }
-    .header__actions ul{
-        @apply lg:flex transition-all;
-    }
-    .header__actions ul li{
-        @apply my-1 lg:my-0 lg:border-t-4 lg:border-transparent lg:hover:border-primary transition-all;
-    }
-    .header__actions ul li a{
-        @apply  hover:text-white lg:text-white  transition-all;
-    }
-    .header__actions ul li a{
-        @apply hover:bg-primary lg:hover:bg-slate-600;
-    }
-    .header__actions ul li:hover .dropdown{
-        @apply lg:overflow-visible lg:top-[3.8rem] lg:max-h-[40rem] opacity-100 transition-all;
-    }
-    .header__actions ul li:first-child{
-        @apply lg:border-primary;
-    }
-    .header__actions ul li a{
-        @apply flex items-center justify-between p-4;
-    }
-    .header__actions ul li a i{
-        @apply lg:hidden;
-    }
+
     .header__actions.open{
-        @apply duration-500 top-[4rem] left-0  transition-all lg:top-0;
+        @apply duration-500 top-[3.5rem] left-0 py-[1.5rem] transition-all lg:top-0 lg:py-0 z-[3];
+    }
+
+    .header__actions ul{
+        @apply border-t-[1px] pt-[1.5rem] lg:pt-0 lg:border-none lg:flex transition-all;
+    }
+
+    .header__actions ul li{
+        @apply my-1 hover:bg-primary lg:mr-[1.3rem] lg:hover:border-t-[4px] lg:hover:border-primary lg:hover:bg-slate-600 lg:my-0 lg:border-t-4 lg:border-transparent transition-all;
+    }
+
+    .header__actions ul li h4{
+        @apply flex items-center justify-between hover:text-white lg:justify-evenly lg:text-white  transition-all;
+    }
+
+    .header__actions ul li h4 a{
+        @apply flex items-center justify-between pr-[1.3rem] hover:text-white lg:text-white  transition-all;
+    }
+
+    .header__actions ul li a{
+        @apply flex items-center justify-between p-[1rem] hover:bg-primary lg:hover:bg-transparent;
+    }
+
+    .header__actions ul li:hover .drop-down-item{
+        @apply lg:max-w-[100%] lg:overflow-visible lg:top-[3.8rem] lg:p-[1rem] lg:max-h-[40rem] opacity-100 transition-all;
+    }
+
+    .header__actions ul li:first-child{
+        @apply bg-primary lg:bg-slate-600 lg:border-primary;
+    }
+
+    .header__actions ul li:last-child .drop-down-item{
+        @apply left-[10rem] max-w-[100%];
+    }
+
+    .header__actions ul li h4 i{
+        @apply text-[.7rem] mr-[1.3rem] transition ease-linear duration-300 lg:hidden;
+    }
+
+    .header__actions ul li h4 i.open{
+        @apply transition ease-linear duration-300 rotate-[180deg];
     }
 
 
-    .dropdown{
-        @apply max-h-0 bg-white overflow-hidden transition-all lg:absolute lg:top-[6rem] lg:overflow-hidden lg:opacity-0 lg:max-h-0 lg:text-dark lg:flex duration-500;
+    .drop-down-item{
+        @apply max-h-0 bg-white overflow-hidden transition-all lg:absolute lg:top-[6rem] lg:overflow-hidden lg:opacity-0 lg:max-h-0 lg:min-w-[20rem] lg:text-dark lg:flex duration-500;
     }
-    .dropdown__item{
-        @apply lg:mx-[1rem];
-    }
-    .dropdown h4{
-        @apply text-[2rem] text-left text-[#50ba87] mx-3 border-b-2 lg:border-transparent;
-    }
-    .dropdown ul{
-        @apply flex-col m-3;
-    }
-    .dropdown ul li{
-        @apply lg:border-t-0 ;
-    }
-    .dropdown ul li a{
-        @apply h-[1rem] lg:text-dark lg:hover:bg-transparent lg:translate-x-1 lg:hover:translate-x-0 lg:hover:text-dark lg:border-transparent lg:border-l-4 lg:hover:border-primary;
-    }
-    .dropdown.open{
+
+    .drop-down-item.open{
         @apply max-h-full transition-all lg:hidden;
     }
 
-
-    .mob-social ul{
-        @apply flex items-center px-[3.5rem] py-[2rem]
+    .drop-down-item ul{
+        @apply lg:flex lg:flex-col
     }
 
-    .mob-social ul li{
-        @apply mr-[1rem]
+    .drop-down-item ul li{
+        @apply hover:bg-primary lg:border-t-0 lg:hover:bg-transparent ;
+    }
+
+    .drop-down-item ul li:first-child{
+        @apply bg-transparent lg:border-t-0 ;
+    }
+
+    .drop-down-item ul li a{
+        @apply pl-[1.5rem] py-[1.5rem] h-[1rem] hover:text-light lg:pl-0 lg:hover:pl-[1.5rem] lg:text-dark lg:hover:bg-transparent lg:translate-x-1 lg:hover:translate-x-0 lg:hover:text-dark lg:border-transparent lg:border-l-4 lg:hover:border-primary;
+    }
+
+    .drop-down-item .item-content{
+        @apply min-w-[30rem]
+    }
+
+    .drop-down-item .item-content h3{
+        @apply text-[2rem] text-left text-[#50ba87] py-[1rem] mx-3 border-b-2 lg:border-transparent;
+    }
+
+    .drop-down-item .item-content:last-child{
+        @apply lg:border-l-[1px] lg:pl-[4rem]
+    }
+
+    .drop-down-item .item-content ul{
+        @apply pt-0 flex-col border-none lg:grid lg:grid-cols-2
+    }
+
+    .drop-down-item .item-content ul li{
+        @apply lg:border-t-0
+    }
+
+    .drop-down-item .item-content ul li a{
+        @apply hover:text-light lg:hover:text-dark
+    }
+
+
+    .mob-social{
+        @apply mb-[1.5rem] lg:mb-0
+    }
+
+    .mob-social a{
+        @apply mr-[1rem] text-[1.3rem] hover:text-primary lg:text-light
     }
 
 
@@ -161,7 +203,7 @@
     }
 
     .burger__menu.open span:nth-child(2){
-        @apply w-[.25rem] h-[.25rem] my-[.4rem] transition ease-in-out duration-500;
+        @apply w-[.25rem] h-[.25rem] my-[.3rem] transition ease-in-out duration-500;
     }
 
     .burger__menu.open span:last-child{
@@ -170,11 +212,11 @@
 
 
     .header__contact{
-        @apply absolute top-[-100rem] right-0 bg-light shadow-[0_0_22px_-4px_rgba(0,0,0,0.17)] lg:relative lg:top-0 lg:shadow-none lg:flex lg:items-center
+        @apply absolute top-[-100rem] z-[3] right-0 bg-light shadow-[0_0_22px_-4px_rgba(0,0,0,0.17)] lg:z-[1] lg:relative lg:top-0 lg:shadow-none lg:flex lg:items-center
     }
 
     .header__contact.open{
-        @apply top-[3.5rem] px-[1.5rem] py-[2rem] z-[-1] lg:relative lg:top-0 lg:px-0 lg:py-0
+        @apply top-[3.6rem] px-[1.5rem] py-[2rem] lg:relative lg:top-0 lg:px-0 lg:py-0
     }
 
     .header__contact p{
@@ -190,6 +232,39 @@
     }
 
     .header__contact a{
-        @apply py-[.8rem] px-[2rem] border-[2px] border-primary
+        @apply py-[.8rem] px-[2rem] border-[2px] border-primary hover:bg-primary transition ease-in-out duration-300
+    }
+
+
+    /** ---------- HOME BANNER ---------- */
+
+    #hm-img1{
+        @apply bg-banner-1 w-full flex items-center bg-cover bg-center min-h-[100vh] bg-no-repeat lg:min-h-[70vh];
+    }
+    #hm-img2{
+        @apply bg-banner-2 w-full flex items-center bg-cover bg-center min-h-[100vh] bg-no-repeat lg:min-h-[70vh];
+    }
+    #hm-img3{
+        @apply bg-banner-3 w-full flex items-center bg-cover bg-center min-h-[100vh] bg-no-repeat lg:min-h-[70vh];
+    }
+
+    .hm-banner{
+        @apply relative
+    }
+
+    .hm-banner__text h4{
+        @apply text-light font-[600] text-[1.05rem] tracking-[.15rem] leading-[1.1rem]
+    }
+
+    .hm-banner__text h1{
+        @apply text-light text-[2.5rem] mt-[.5rem] mb-[3rem]
+    }
+
+    .hm-banner__text span{
+        @apply font-[700]
+    }
+
+    .hm-banner__text a{
+        @apply text-[1.1rem] text-light border-light border-[2px] py-[1rem] px-[2rem]
     }
 }

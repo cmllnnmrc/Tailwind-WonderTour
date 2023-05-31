@@ -10,9 +10,9 @@
       src="https://kit.fontawesome.com/4f3a4a675c.js"
       crossorigin="anonymous"
     ></script>
-  </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
   <body>
-    <div class="header">
+    <header class="header">
         <div class="header__wrapper">
             <div class="branding">
               <div class="toggle__menu">
@@ -35,16 +35,16 @@
         </div>
         <div class="header__nav__container">
           <div class="header__actions">
-              <div class="desktop-social">
+              <div class="mob-social">
                   <a href=""><i class="fa-brands fa-facebook-f"></i></a>
                   <a href=""><i class="fa-brands fa-twitter"></i></a>
                   <a href=""><i class="fa-brands fa-google-plus-g"></i></a>
                   <a href=""><i class="fa-brands fa-instagram"></i></a>
               </div>
               <ul>
-                  <li><a href="">Home</a></li>
+                  <li><h4><a href="">Home</a></h4></li>
                   <li>
-                      <a href="javascript:void(0);">About<i class="fa-solid fa-chevron-down"></i></a>
+                      <h4><a href="javascript:void(0);">About</a><i class="fa-solid fa-chevron-down"></i></h4>
                       <div class="drop-down-item">
                           <ul>
                               <li><a href="">Our Team</a></li>
@@ -52,7 +52,7 @@
                       </div>
                   </li>
                   <li>
-                      <a href="javascript:void(0);">Our Tours<i class="fa-solid fa-chevron-down"></i></a>
+                      <h4><a href="javascript:void(0);">Our Tours</a><i class="fa-solid fa-chevron-down"></i></h4>
                       <div class="drop-down-item">
                           <ul>
                               <li><a href="">Single Tour</a></li>
@@ -60,7 +60,7 @@
                       </div>
                   </li>
                   <li>
-                      <a href="javascript:void(0);">Gallery<i class="fa-solid fa-chevron-down"></i></a>
+                      <h4><a href="javascript:void(0);">Gallery</a><i class="fa-solid fa-chevron-down"></i></h4>
                       <div class="drop-down-item">
                           <ul>
                               <li><a href="">Grid Gallery</a></li>
@@ -71,7 +71,7 @@
                       </div>
                   </li>
                   <li>
-                      <a href="javascript:void(0);">Blog<i class="fa-solid fa-chevron-down"></i></a>
+                      <h4><a href="javascript:void(0);">Blog</a><i class="fa-solid fa-chevron-down"></i></h4>
                       <div class="drop-down-item">
                           <ul>
                               <li><a href="">Classic Blog</a></li>
@@ -82,45 +82,88 @@
                           </ul>
                       </div>
                   </li>
-                  <li><a href="javascript:void(0);">Contact Us</a></li>
+                  <li><h4><a href="javascript:void(0);">Contact Us</a></h4></li>
                   <li>
-                      <a href="javascript:void(0);">Pages<i class="fa-solid fa-chevron-down"></i></a>
+                      <h4><a href="javascript:void(0);">Pages</a><i class="fa-solid fa-chevron-down"></i></h4>
                       <div class="drop-down-item">
-                          <div class="dropdown__item">
-                              <h4>Elements</h4>
-                          <ul>
-                              <li><a href="">Typography</a></li>
-                              <li><a href="">Buttons</a></li>
-                              <li><a href="">Forms</a></li>
-                              <li><a href="">Tabs and Accordions</a></li>
-                              <li><a href="">Counters</a></li>
-                              <li><a href="">Icons with Text</a></li>
-                              <li><a href="">Progress Bars</a></li>
-                              <li><a href="">Grid System</a></li>
-                              <li><a href="">Privacy policy</a></li>
-                          </ul>
+                          <div class="item-content">
+                            <h3>Elements</h3>
+                            <ul>
+                                <li><a href="">Typography</a></li>
+                                <li><a href="">Buttons</a></li>
+                                <li><a href="">Forms</a></li>
+                                <li><a href="">Tabs and Accordions</a></li>
+                                <li><a href="">Counters</a></li>
+                                <li><a href="">Icons with Text</a></li>
+                                <li><a href="">Progress Bars</a></li>
+                                <li><a href="">Grid System</a></li>
+                                <li><a href="">Privacy policy</a></li>
+                            </ul>
                           </div>
-                          <div class="dropdown__item">
-                              <h4>Additional Pages</h4>
-                          <ul>
-                              <li><a href="">Services</a></li>
-                              <li><a href="">Testimonials</a></li>
-                              <li><a href="">404 Page</a></li>
-                              <li><a href="">503 Page</a></li>
-                              <li><a href="">Pricing</a></li>
-                              <li><a href="">Coming Soon</a></li>
-                              <li><a href="">Contact Us 2</a></li>
-                              <li><a href="">FAQ</a></li>
-                              <li><a href="">Search results</a></li>
-                          </ul>
+                          <div class="item-content">
+                            <h3>Additional Pages</h3>
+                            <ul>
+                                <li><a href="">Services</a></li>
+                                <li><a href="">Testimonials</a></li>
+                                <li><a href="">404 Page</a></li>
+                                <li><a href="">503 Page</a></li>
+                                <li><a href="">Pricing</a></li>
+                                <li><a href="">Coming Soon</a></li>
+                                <li><a href="">Contact Us 2</a></li>
+                                <li><a href="">FAQ</a></li>
+                                <li><a href="">Search results</a></li>
+                            </ul>
                           </div>
                       </div>
                   </li>
               </ul>
           </div>
       </div>
-    </div>
+    </header>
+
+    <section class="hm-banner">
+      <div class="hm-banner__slides">
+        <div class="hm-banner__item" id="hm-img1">
+          <div class="container">
+            <div class="hm-banner__text">
+              <h4>ENJOY THE BEST DESTINATIONS WITH OUR TRAVEL AGENCY</h4>
+              <h1>Explore <span>The World</span></h1>
+              <a href="">Get in touch</a>
+          </div>
+          </div>
+        </div>
+        <div class="hm-banner__item" id="hm-img2">
+          <div class="hm-banner__text">
+              
+          </div>
+        </div>
+        <div class="hm-banner__item" id="hm-img3">
+          <div class="hm-banner__text">
+              
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
 
     <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    
+    <script type="module">
+      // import {tns} from './src/tiny-slider.js';
+      var slider = tns({
+        container: '.hm-banner__slides',
+        items: 1,
+        slideby: 'page',
+        axis: 'vertical',
+        autoplay: true,
+        autoplayButtonOutput: false,
+        controls: false,
+        nav: true,
+        navPosition: 'top',
+      });
+  </script>
+
   </body>
 </html>
