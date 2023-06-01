@@ -4,7 +4,7 @@
 
 
 .container{
-    @apply max-w-[100rem] mx-auto p-[1rem];
+    @apply max-w-[75rem] mx-auto p-[1rem];
 }
 
 .tns-nav{
@@ -19,6 +19,28 @@
     @apply bg-primary
 }
 
+@layer utilities{
+    .btn{
+        @apply inline-block p-[1rem] border-transparent
+    }
+
+    .white{
+        @apply py-[.8rem] px-[2rem] border-[2px] border-primary hover:border-primary hover:scale-[1.1] hover:bg-primary transition ease-in-out duration-300
+    }
+
+    .white-border{
+        @apply text-[1.1rem] text-light border-light border-[2px] py-[1rem] px-[2rem] hover:border-primary hover:scale-[1.1] hover:bg-primary transition ease-in-out duration-300
+    }
+
+    .green-bg{
+        @apply py-[1rem] px-[2.5rem] text-light border-[2px] bg-primary hover:bg-light hover:border-black hover:text-dark transition ease-out duration-300
+    }
+
+    .black-border{
+        @apply py-[1rem] px-[2.5rem] text-dark border-[2px] bg-transparent border-black hover:bg-primary hover:border-primary transition ease-out duration-300
+    }
+}
+
 @layer components{
 
     /** ---------- HEADER ---------- */
@@ -28,7 +50,7 @@
     }
 
     .header__wrapper{
-        @apply relative flex items-center justify-between max-w-[100rem] mx-auto px-[1rem] py-[1.1rem] lg:py-[2rem];
+        @apply relative flex items-center justify-between max-w-[75rem] mx-auto px-[1rem] py-[1.1rem] lg:py-[1.5rem];
     }
 
 
@@ -37,7 +59,7 @@
     }
 
     .branding img{
-        @apply w-[10rem]
+        @apply w-[10rem] lg:w-[13rem]
     }
 
 
@@ -47,7 +69,7 @@
 
 
     .header__actions{
-        @apply bg-light duration-500 absolute flex flex-col h-[100vh] w-[60%] overflow-y-scroll left-[-100rem] overflow-hidden text-center lg:text-center lg:bg-transparent lg:relative lg:overflow-visible lg:h-[100%] lg:flex-row-reverse lg:items-center lg:justify-between lg:w-full lg:max-w-[100rem] lg:mx-auto lg:left-0 transition-all;
+        @apply bg-light duration-500 absolute flex flex-col h-[100vh] w-[60%] overflow-y-scroll left-[-100rem] overflow-hidden text-center lg:text-center lg:bg-transparent lg:relative lg:overflow-visible lg:h-[100%] lg:flex-row-reverse lg:items-center lg:justify-between lg:w-full lg:max-w-[75rem] lg:mx-auto lg:left-0 transition-all;
     }
 
     .header__actions.open{
@@ -75,7 +97,7 @@
     }
 
     .header__actions ul li:hover .drop-down-item{
-        @apply lg:max-w-[100%] lg:overflow-visible lg:top-[3.8rem] lg:p-[1rem] lg:max-h-[40rem] opacity-100 transition-all;
+        @apply lg:max-w-[100%] lg:overflow-visible lg:top-[3.8rem] lg:p-[1rem] lg:max-h-[40rem] opacity-100 transition-all z-[5];
     }
 
     .header__actions ul li:first-child{
@@ -104,7 +126,7 @@
     }
 
     .drop-down-item ul{
-        @apply lg:flex lg:flex-col
+        @apply pt-0 lg:flex lg:flex-col
     }
 
     .drop-down-item ul li{
@@ -228,24 +250,20 @@
     }
 
     .header__contact p:nth-child(2){
-        @apply mb-[2.5rem] lg:mb-0 lg:mx-[2rem] lg:border-l-[1px] lg:pl-[2rem]
-    }
-
-    .header__contact a{
-        @apply py-[.8rem] px-[2rem] border-[2px] border-primary hover:bg-primary transition ease-in-out duration-300
+        @apply mb-[2.5rem] lg:mb-0 lg:mx-[2rem] lg:border-l-[1px] lg:pl-[2rem] lg:mr-[5rem]
     }
 
 
     /** ---------- HOME BANNER ---------- */
 
     #hm-img1{
-        @apply bg-banner-1 w-full flex items-center bg-cover bg-center min-h-[100vh] bg-no-repeat lg:min-h-[70vh];
+        @apply bg-banner-1 w-full flex items-center bg-cover bg-center min-h-[100vh] bg-no-repeat lg:min-h-[90vh];
     }
     #hm-img2{
-        @apply bg-banner-2 w-full flex items-center bg-cover bg-center min-h-[100vh] bg-no-repeat lg:min-h-[70vh];
+        @apply bg-banner-2 w-full flex items-center bg-cover bg-center min-h-[100vh] bg-no-repeat lg:min-h-[90vh];
     }
     #hm-img3{
-        @apply bg-banner-3 w-full flex items-center bg-cover bg-center min-h-[100vh] bg-no-repeat lg:min-h-[70vh];
+        @apply bg-banner-3 w-full flex items-center bg-cover bg-center min-h-[100vh] bg-no-repeat lg:min-h-[90vh];
     }
 
     .hm-banner{
@@ -257,14 +275,152 @@
     }
 
     .hm-banner__text h1{
-        @apply text-light text-[2.5rem] mt-[.5rem] mb-[3rem]
+        @apply text-light text-[2.5rem] mt-[.5rem] mb-[1.5rem] lg:text-[3.5rem]
     }
 
     .hm-banner__text span{
         @apply font-[700]
     }
 
-    .hm-banner__text a{
-        @apply text-[1.1rem] text-light border-light border-[2px] py-[1rem] px-[2rem]
+
+    /** ---------- TOUR BANNER ---------- */
+
+    .tours{
+        @apply relative bg-lgrey py-[3rem]
+    }
+
+    .tours__content{
+        @apply lg:mt-[-7rem]
+    }
+
+    .tours__wrapper{
+        @apply flex flex-col justify-center lg:flex lg:flex-row
+    }
+
+    .tours__item:nth-child(2){
+        @apply my-[2rem] lg:my-0 lg:mx-[2rem]
+    }
+
+    .tours__card{
+        @apply relative overflow-hidden
+    }
+
+    .tours__card img{
+        @apply h-[27rem] w-[70vw] hover:scale-[1.05] transition ease-in-out duration-300 lg:w-[20vw] lg:h-[23rem]
+    }
+
+    .tours__card a{
+        @apply flex items-baseline justify-center
+    }
+
+    .tours__card a h4{
+        @apply absolute bottom-[2rem] text-light text-[1.5rem] font-[700]
+    }
+
+
+    .tours__btn{
+        @apply mt-[3rem] flex items-center justify-center relative
+    }
+
+    .tours__btn p{
+        @apply text-[1.2rem]
+    }
+
+    .tours__btn a{
+        @apply flex items-center justify-end relative
+    }
+
+    .tours__btn a span{
+        @apply bg-dark block w-[1rem] h-[.1rem] ml-[.5rem] transition-[.8s] ease-in rounded-full;
+    }
+
+    .tours__btn:hover a span{
+        @apply w-[1.5rem] transition-[.8s] ease-in;
+    }
+
+    .tours__btn a i{
+        @apply absolute right-0 text-[.8rem] pt-[.15rem];
+    }
+
+
+    /** ---------- ABOUT BANNER ---------- */
+
+    .about{
+        @apply my-[3rem] min-h-[45rem] lg:min-h-[20rem]
+    }
+
+    .about__wrapper{
+        @apply lg:grid lg:grid-cols-2 lg:gap-x-[5rem] lg:justify-between
+    }
+
+    .about__content{
+        @apply lg:max-w-[30.5rem]
+    }
+
+    .about__nav h3{
+        @apply text-[2rem] font-[600] text-center my-[1.5rem] lg:text-start
+    }
+
+    .about__nav ul{
+        @apply flex flex-wrap items-center justify-center my-[1rem] lg:flex lg:flex-row lg:justify-start lg:my-0
+    }
+
+    .about__nav ul li{
+        @apply border-y-[1px] text-dgrey  hover:text-primary py-[.3rem] lg:border-y-0 lg:border-b-[2px] lg:pr-[2rem]
+    }
+
+    .about__nav ul li.active{
+        @apply text-primary
+    }
+
+    .about__nav ul li.active a{
+        @apply pb-[.45rem] border-b-[2px] border-primary
+    }
+
+    .about__nav ul li:last-child{
+        @apply mt-[1rem] lg:mt-0
+    }
+
+    .about__nav ul li a{
+        @apply px-[1rem] text-[1.3rem] tracking-[.2rem] lg:tracking-[.1rem] lg:px-0 lg:text-[1.1rem]
+    }
+
+    .about__desc{
+        @apply relative
+    }
+
+    .about__text__content{
+        @apply absolute hidden
+    }
+
+    .about__text__content.active{
+        @apply block min-h-[12rem]
+    }
+
+    .about__text__content p{
+        @apply mb-[1.5rem] text-center lg:text-start lg:mt-[1.5rem] lg:mb-[2rem]
+    }
+
+    .about__text__content ul{
+        @apply flex items-center justify-center gap-x-[1rem] lg:justify-start
+    }
+
+    .about__text__content ul li{
+        @apply flex items-center gap-x-[2rem]
+    }
+
+    .about__text__content ul li a{
+        @apply min-w-[10rem] flex justify-center
+    }
+
+
+    /** ---------- SERVICES BANNER ---------- */
+
+    .services__card{
+        @apply bg-lgrey p-[.5rem]
+    }
+
+    .services__content{
+        @apply bg-light flex flex-col
     }
 }

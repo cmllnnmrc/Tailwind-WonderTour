@@ -23,3 +23,27 @@ burgerMenu.addEventListener("click", () => {
   burgerMenu.classList.toggle("open");
   mobileMenu.classList.toggle("open");
 });
+
+const tabNav = document.querySelectorAll(".tab-nav-link");
+const tabContent = document.querySelectorAll(".about__text__content");
+tabNav.forEach((nav) => {
+  nav.addEventListener("click", () => {
+    removeActiveStar();
+    nav.classList.add("active");
+    const activeContent = document.querySelector(`#${nav.id}-content`);
+    removeActiveContent();
+    activeContent.classList.add("active");
+  });
+});
+
+function removeActiveStar() {
+  tabNav.forEach((nav) => {
+    nav.classList.remove("active");
+  });
+}
+
+function removeActiveContent() {
+  tabContent.forEach((nav) => {
+    nav.classList.remove("active");
+  });
+}
