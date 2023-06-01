@@ -374,7 +374,7 @@
     }
 
     .about__nav ul li.active a{
-        @apply pb-[.45rem] border-b-[2px] border-primary
+        @apply lg:pb-[.45rem] py-[.5rem] border-y-[2px] lg:border-y-0 lg:border-b-[2px] border-primary
     }
 
     .about__nav ul li:last-child{
@@ -416,11 +416,43 @@
 
     /** ---------- SERVICES BANNER ---------- */
 
-    .services__card{
-        @apply bg-lgrey p-[.5rem]
+    .services{
+        @apply py-[3rem]
     }
 
-    .services__content{
-        @apply bg-light flex flex-col
+    .services__title h3{
+        @apply mb-[2rem] text-[2.5rem] text-center font-[600]
+    }
+
+    .services__wrapper{
+        @apply lg:grid lg:grid-cols-3 lg:gap-x-[1rem]
+    }
+
+    .services__card{
+        @apply bg-lgrey p-[.5rem] mb-[2rem] hover:bg-transparent hover:shadow-[0_0_10px_0_rgba(0,0,0,0.17)] transition ease-out duration-300
+    }
+
+    .services__text{
+        @apply bg-light flex flex-col text-center py-[1.5rem] px-[2rem] lg:grid lg:grid-cols-[_.5fr_2fr] lg:px-[1.5rem] lg:text-start lg:py-[2.5rem]
+    }
+
+    .services__card:first-child .services__text i{
+        @apply rotate-[270deg]
+    }
+
+    .services__text i{
+        @apply text-[2rem] text-primary
+    }
+
+    .svc-text{
+        @apply my-[1.5rem] lg:my-0
+    }
+
+    .svc-text a{
+        @apply text-[1.5rem] lg:leading-[1rem]
+    }
+
+    .svc-text p{
+        @apply text-dgrey mt-[1rem]
     }
 }
