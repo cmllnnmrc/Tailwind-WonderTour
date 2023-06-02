@@ -39,6 +39,10 @@
     .black-border{
         @apply py-[1rem] px-[2.5rem] text-dark border-[2px] bg-transparent border-black hover:bg-primary hover:border-primary transition ease-out duration-300
     }
+
+    .green{
+        @apply py-[1rem] px-[2.5rem] text-light border-[2px] bg-primary hover:bg-transparent hover:border-light hover:text-light transition ease-out duration-300
+    }
 }
 
 @layer components{
@@ -97,7 +101,7 @@
     }
 
     .header__actions ul li:hover .drop-down-item{
-        @apply lg:max-w-[100%] lg:overflow-visible lg:top-[3.8rem] lg:p-[1rem] lg:max-h-[40rem] opacity-100 transition-all z-[5];
+        @apply lg:max-w-[100%] lg:overflow-visible lg:top-[3.7rem] lg:p-[1rem] lg:max-h-[40rem] opacity-100 transition-all z-[5];
     }
 
     .header__actions ul li:first-child{
@@ -374,7 +378,7 @@
     }
 
     .about__nav ul li.active a{
-        @apply lg:pb-[.45rem] py-[.5rem] border-y-[2px] lg:border-y-0 lg:border-b-[2px] border-primary
+        @apply lg:pb-[.45rem] py-[.4rem] border-y-[2px] lg:border-y-0 lg:border-b-[2px] border-primary
     }
 
     .about__nav ul li:last-child{
@@ -416,10 +420,6 @@
 
     /** ---------- SERVICES BANNER ---------- */
 
-    .services{
-        @apply py-[3rem]
-    }
-
     .services__title h3{
         @apply mb-[2rem] text-[2.5rem] text-center font-[600]
     }
@@ -429,7 +429,7 @@
     }
 
     .services__card{
-        @apply bg-lgrey p-[.5rem] mb-[2rem] hover:bg-transparent hover:shadow-[0_0_10px_0_rgba(0,0,0,0.17)] transition ease-out duration-300
+        @apply bg-lgrey p-[.5rem] mb-[2rem] lg:hover:bg-transparent lg:hover:shadow-[0_0_10px_0_rgba(0,0,0,0.17)] transition ease-out duration-300
     }
 
     .services__text{
@@ -449,10 +449,136 @@
     }
 
     .svc-text a{
-        @apply text-[1.5rem] lg:leading-[1rem]
+        @apply text-[1.5rem] hover:text-primary
     }
 
     .svc-text p{
         @apply text-dgrey mt-[1rem]
+    }
+
+
+    /** ---------- HOT TOUR BANNER ---------- */
+
+    .reco__title h3{
+        @apply text-[2.5rem] mb-[2rem] text-center font-[600]
+    }
+
+
+    .reco__item{
+        @apply relative lg:flex lg:gap-x-[5rem] lg:items-center lg:border-[1px] lg:max-w-[100vw]
+    }
+
+    .reco__item:first-child{
+        @apply mb-[3rem]
+    }
+
+
+    .reco__img img{
+        @apply lg:w-[70rem] lg:max-h-[100%]
+    }
+
+    .place__img p::before{
+        @apply 
+    }
+
+
+    .reco__img span{
+        @apply absolute overflow-hidden top-0 right-0 px-[1rem] py-1 font-bold text-white bg-transparent z-[1]
+    }
+
+    .reco__img span:before{
+        @apply absolute right-[-2rem] top-0 bg-primary block content-[""] w-[5.5rem] h-[2rem] z-[-1] origin-bottom-left skew-x-[45deg]
+    }
+
+
+    .reco__text-title{
+        @apply  mt-[1.5rem] mb-[.5rem]
+    }
+    
+    .reco__text-title a{
+        @apply text-[1.5rem] hover:text-primary transition ease-in-out duration-300
+    }
+
+
+    .reco__text span a{
+        @apply text-[.9rem] tracking-[.05rem] ml-[.5rem] text-dgrey
+    }
+
+    .reco__text span i{
+        @apply text-yellow-400 tracking-[.2rem]
+    }
+
+    .reco__text p{
+        @apply mb-[2rem] mt-[1rem] text-dgrey lg:pr-[5rem]
+    }
+
+
+    /** ---------- TEAM BANNER ---------- */
+
+    .team{
+        @apply py-[2rem]
+    }
+
+    .team__title h3{
+        @apply text-[2rem] mb-[2rem] text-center font-[600]
+    }
+
+    .team__wrapper{
+        @apply lg:flex lg:items-center lg:justify-between
+    }
+
+    .team__item{
+        @apply flex flex-col items-center mt-[8rem] lg:mt-[6rem]
+    }
+
+    .team__card{
+        @apply bg-lgrey w-[55vw] h-[25vh] flex flex-col items-center lg:w-[14vw] lg:h-[15rem]
+    }
+
+    .team__card__img{
+        @apply rounded-full bg-light p-[.8rem] mt-[-5rem]
+    }
+
+    .team__card__img img{
+        @apply rounded-full lg:border-transparent lg:hover:bg-primary lg:border-[3px] lg:hover:translate-y-[-1rem] transition ease-in-out duration-300
+    }
+
+    .team__card__text{
+        @apply mt-[2rem] text-center
+    }
+
+    .team__card__text ul li:nth-child(2){
+        @apply my-[.3rem]
+    }
+
+    .team__card__text ul li a{
+        @apply text-[1.3rem] font-[600] hover:text-primary transition ease-in-out duration-300
+    }
+
+    .team__card__text ul li span{
+        @apply text-primary
+    }
+
+
+    /** ---------- BOOK BANNER ---------- */
+
+    .book{
+        @apply relative;
+    }
+    
+    .book__wrapper{
+        @apply bg-book-img bg-center bg-scroll
+    }
+
+    .book__content{
+        @apply relative z-50 text-center text-light py-[2rem]
+    }
+
+    .book__content h2{
+        @apply text-[2.5rem]
+    }
+
+    .book__content span{
+        @apply font-[600]
     }
 }
