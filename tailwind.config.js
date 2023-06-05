@@ -27,6 +27,8 @@ module.exports = {
         'banner-2': 'url("./wonder-img/banner-img2.jpg")',
         'banner-3': 'url("./wonder-img/banner-img3.jpg")',
         'book-img': 'url("./wonder-img/book-img.jpg")',
+        'dream-bg': 'url("./wonder-img/dream-bg.jpg")',
+        'discount-bg': 'url("./wonder-img/discount-img.jpg")',
       }
     },
   },

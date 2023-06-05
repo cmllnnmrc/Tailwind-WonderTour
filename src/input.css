@@ -19,6 +19,10 @@
     @apply bg-primary
 }
 
+.blog .tns-nav{
+    @apply flex items-center justify-center top-[85%] right-[35%] lg:right-[50%]
+}
+
 @layer utilities{
     .btn{
         @apply inline-block p-[1rem] border-transparent
@@ -63,7 +67,7 @@
     }
 
     .branding img{
-        @apply w-[10rem] lg:w-[13rem]
+        @apply min-w-[10rem] lg:min-w-[13rem]
     }
 
 
@@ -134,7 +138,7 @@
     }
 
     .drop-down-item ul li{
-        @apply hover:bg-primary lg:border-t-0 lg:hover:bg-transparent ;
+        @apply hover:bg-primary lg:border-t-0 lg:hover:border-t-0 lg:hover:bg-transparent ;
     }
 
     .drop-down-item ul li:first-child{
@@ -261,13 +265,13 @@
     /** ---------- HOME BANNER ---------- */
 
     #hm-img1{
-        @apply bg-banner-1 w-full flex items-center bg-cover bg-center min-h-[100vh] bg-no-repeat lg:min-h-[90vh];
+        @apply bg-banner-1 w-full flex items-center bg-cover bg-center min-h-[100vh] bg-no-repeat lg:min-h-[70vh];
     }
     #hm-img2{
-        @apply bg-banner-2 w-full flex items-center bg-cover bg-center min-h-[100vh] bg-no-repeat lg:min-h-[90vh];
+        @apply bg-banner-2 w-full flex items-center bg-cover bg-center min-h-[100vh] bg-no-repeat lg:min-h-[70vh];
     }
     #hm-img3{
-        @apply bg-banner-3 w-full flex items-center bg-cover bg-center min-h-[100vh] bg-no-repeat lg:min-h-[90vh];
+        @apply bg-banner-3 w-full flex items-center bg-cover bg-center min-h-[100vh] bg-no-repeat lg:min-h-[70vh];
     }
 
     .hm-banner{
@@ -465,7 +469,11 @@
 
 
     .reco__item{
-        @apply relative lg:flex lg:gap-x-[5rem] lg:items-center lg:border-[1px] lg:max-w-[100vw]
+        @apply relative lg:flex lg:gap-x-[5rem] lg:items-center lg:border-[1px] lg:max-w-[100vw] lg:overflow-hidden
+    }
+
+    .reco__item:hover .reco__img img{
+        @apply lg:scale-[1.05] transition ease-in-out duration-300
     }
 
     .reco__item:first-child{
@@ -473,8 +481,12 @@
     }
 
 
+    .reco__img{
+        @apply overflow-hidden
+    }
+
     .reco__img img{
-        @apply lg:w-[70rem] lg:max-h-[100%]
+        @apply lg:w-[70rem] lg:max-h-[100%] transition ease-in-out duration-300
     }
 
     .place__img p::before{
@@ -516,7 +528,7 @@
     /** ---------- TEAM BANNER ---------- */
 
     .team{
-        @apply py-[2rem]
+        @apply py-[5rem]
     }
 
     .team__title h3{
@@ -532,11 +544,11 @@
     }
 
     .team__card{
-        @apply bg-lgrey w-[55vw] h-[25vh] flex flex-col items-center lg:w-[14vw] lg:h-[15rem]
+        @apply bg-lgrey flex flex-col items-center py-[2rem] px-[3.5rem]
     }
 
     .team__card__img{
-        @apply rounded-full bg-light p-[.8rem] mt-[-5rem]
+        @apply rounded-full bg-light p-[.5rem] mt-[-6rem]
     }
 
     .team__card__img img{
@@ -563,22 +575,219 @@
     /** ---------- BOOK BANNER ---------- */
 
     .book{
-        @apply relative;
+        @apply relative
     }
     
     .book__wrapper{
-        @apply bg-book-img bg-center bg-scroll
+        @apply bg-book-img bg-no-repeat bg-cover bg-center bg-fixed lg:min-h-[50vh] flex flex-col items-center justify-center
     }
 
     .book__content{
-        @apply relative z-50 text-center text-light py-[2rem]
+        @apply relative z-50 flex flex-col justify-center items-center text-center text-light py-[2rem]
     }
 
     .book__content h2{
-        @apply text-[2.5rem]
+        @apply text-[2.5rem] lg:text-[4rem] lg:w-[60%]
     }
 
     .book__content span{
         @apply font-[600]
+    }
+
+    .book__content p{
+        @apply font-[600] lg:text-[1.2rem] lg:w-[60%]
+    }
+
+    .book__content a{
+        @apply mt-[2rem]
+    }
+
+
+    /** ---------- TESTIMONY BANNER ---------- */
+
+    .testimony{
+        @apply py-[5rem] bg-lgrey
+    }
+
+    .testimony__wrapper{
+        @apply lg:grid lg:grid-cols-3 lg:gap-x-[2rem]
+    }
+
+    .testimony__title h3{
+        @apply text-[2rem] mb-[2rem] text-center font-[600]
+    }
+
+    .testimony__item:first-child{
+        @apply mt-[5rem]
+    }
+
+    .testimony__item{
+        @apply mt-[5rem]
+    }
+
+    .testimony__card{
+        @apply bg-light flex flex-col items-center justify-center text-center shadow-[0_0_2px_rgba(0,0,0,0.15)]
+    }
+
+    .testimony__img{
+        @apply rounded-full bg-light p-[1rem] mt-[-3rem] shadow-[0_0_2px_rgba(0,0,0,0.15)]
+    }
+
+    .testimony__img img{
+        @apply rounded-full
+    }
+
+    .testimony__text{
+        @apply py-[1rem] px-[1rem] text-dgrey lg:px-[1.5rem]
+    }
+
+    .testimony__text h4{
+        @apply text-[1.5rem] text-primary my-[1rem] hover:text-lgreen transition ease-in-out duration-300 cursor-pointer
+    }
+
+
+
+    /** ---------- DREAM BANNER ---------- */
+
+    .dream{
+        @apply my-[3rem]
+    }
+
+    .dream__title h3{
+        @apply text-[2rem] mb-[2rem] text-center font-[600] lg:text-[3rem]
+    }
+
+    .dream__wrapper{
+        @apply flex flex-col justify-center items-center lg:grid lg:grid-cols-3 lg:gap-x-[2rem]
+    }
+
+    .dream__item{
+        @apply bg-dream-bg bg-no-repeat bg-center bg-cover p-[1rem]
+    }
+
+    .dream__item:nth-child(2){
+        @apply my-[2rem]
+    }
+
+    .dream__card{
+        @apply bg-light min-w-[50vw] min-h-[25vh] flex flex-col justify-center text-center lg:min-w-0 lg:min-h-0
+    }
+
+    .dream__text{
+        @apply lg:py-[5rem]
+    }
+
+    .dream__text h3{
+        @apply text-[3rem] font-[700] lg:text-[5rem]
+    }
+
+    .dream__text p{
+        @apply text-[1.5rem] font-[600] leading-[1.8rem] lg:text-[1.7rem] lg:px-[5rem] 
+    }
+
+
+    /** ---------- DISCOUNT BANNER ---------- */
+
+    .discount{
+        @apply bg-discount-bg bg-no-repeat bg-cover bg-fixed
+    }
+
+    .discount__content{
+        @apply py-[3rem]
+    }
+
+    .discount__text{
+        @apply text-light flex flex-col items-center text-center mb-[2rem]
+    }
+
+    .discount__text h3{
+        @apply text-[2rem] font-[600] lg:text-[3rem]
+    }
+
+    .discount__text p{
+        @apply w-[85%] mt-[.5rem] lg:text-[1.1rem] lg:w-[50%]
+    }
+
+    .discount__form{
+        @apply lg:flex lg:items-center lg:justify-center lg:gap-x-[1rem]
+    }
+
+    .discount__form input{
+        @apply p-[1rem] text-light bg-light w-full bg-opacity-40 outline-none lg:w-[20rem]
+    }
+
+    .discount__form input::placeholder{
+        @apply text-light
+    }
+
+    .discount__form a{
+        @apply w-full mt-[.5rem] text-center py-[.88rem] hover:bg-dark hover:border-dark font-[600] text-[1.1rem] lg:w-fit lg:mt-0
+    }
+
+
+    /** ---------- BLOG BANNER ---------- */
+
+    .blog{
+        @apply relative pb-[2rem] lg:py-[3rem]
+    }
+
+    .blog__title h3{
+        @apply text-[2rem] mb-[2rem] text-center font-[600] 
+    }
+
+    .blog__wrapper{
+        @apply mx-auto
+    }
+
+    .blog__card{
+        @apply flex flex-col justify-center items-center overflow-hidden translate-x-[1rem]
+    }
+
+    .blog__card:hover .blog__text ul{
+        @apply flex
+    }
+
+    .blog__card:hover img{
+        @apply lg:scale-[1.05]
+    }
+
+    .blog__card img{
+        @apply w-[85vw] max-h-[40vh] lg:w-[25vw] lg:max-h-[40vh]
+    }
+
+    .blog__text{
+        @apply bg-light flex flex-col items-center justify-center text-center translate-x-[1.3rem] p-[1rem] w-[24rem] translate-y-[-5rem] shadow-[0_0_10px_0_rgba(0,0,0,0.27)] lg:w-[27.5rem]
+    }
+
+    .blog__text h4{
+        @apply text-[1.5rem] font-[600] leading-[1.5rem]
+    }
+
+    .blog__text h3{
+        @apply text-[1.3rem] text-primary font-[600] mt-[2rem] mb-[.3rem]
+    }
+
+    .blog__text ul{
+        @apply flex items-center justify-center gap-x-[1rem] lg:hidden
+    }
+
+    .blog__text ul li:first-child{
+        @apply px-[.9rem]
+    }
+
+    .blog__text ul li:nth-child(2){
+        @apply px-[.7rem]
+    }
+
+    .blog__text ul li:nth-child(3){
+        @apply px-[.6rem]
+    }
+
+    .blog__text ul li{
+        @apply bg-dark rounded-full py-[.5rem] px-[.8rem]
+    }
+
+    .blog__text ul li a{
+        @apply text-light
     }
 }
