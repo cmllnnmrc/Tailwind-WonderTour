@@ -611,6 +611,125 @@
       </div>
     </section>
 
+    <section class="gallery">
+      <div class="gallery-title">
+          <h3>Gallery</h3>
+      </div>
+      <div class="gallery__wrapper">
+          <div class="gallery__item">
+              <div class="gallery__content">
+                  <img src="./wonder-img/gallery-1.jpg" alt="">
+              </div>
+              <div class="gallery__icon">
+                <a href=""><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+              </div>
+          </div>
+          <div class="gallery__item">
+              <div class="gallery__content">
+                  <img src="./wonder-img/gallery-2.jpg" alt="">
+              </div>
+              <div class="gallery__icon">
+                <a href=""><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+              </div>
+          </div>
+          <div class="gallery__item">
+              <div class="gallery__content">
+                  <img src="./wonder-img/gallery-3.jpg" alt="">
+              </div>
+              <div class="gallery__icon">
+                <a href=""><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+              </div>
+          </div>
+          <div class="gallery__item">
+            <div class="gallery__content">
+                <img src="./wonder-img/gallery-4.jpg" alt="">
+            </div>
+            <div class="gallery__icon">
+              <a href=""><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+            </div>
+          </div>
+          <div class="gallery__item">
+            <div class="gallery__content">
+                <img src="./wonder-img/gallery-5.jpg" alt="">
+            </div>
+            <div class="gallery__icon">
+              <a href=""><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+            </div>
+          </div>
+          <div class="gallery__item">
+            <div class="gallery__content">
+                <img src="./wonder-img/gallery-6.jpg" alt="">
+            </div>
+            <div class="gallery__icon">
+              <a href=""><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+            </div>
+          </div>
+          <div class="gallery__item">
+            <div class="gallery__content">
+                <img src="./wonder-img/gallery-7.jpg" alt="">
+            </div>
+            <div class="gallery__icon">
+              <a href=""><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__item">
+            <h3>Contact Us</h3>
+            <ul>
+              <li><i class="fa-solid fa-phone"></i><a href="">+1 323-913-4688</a></li>
+              <li><i class="fa-solid fa-envelope"></i><a href="">info@demolink.org</a></li>
+              <li><i class="fa-solid fa-location-arrow"></i><a href="">4730 Crystal Springs Dr, Los Angeles, CA 90027</a></li>
+            </ul>
+          </div>
+          <div class="footer__item">
+            <h3>POPULAR NEWS</h3>
+            <ul>
+              <li><a href="">Your Personal Guide to 5 Best Places to Visit on Earth</a><span>May 04, 2020</span></li>
+              <li><a href="">Top 10 Hotels: Rating by Wonder Tour Travel Experts</a><span>May 04, 2020</span></li>
+            </ul>
+          </div>
+          <div class="footer__item">
+            <h3>QUICK LINKS</h3>
+            <ul>
+              <li><i class="fa-solid fa-circle"></i><a href="">About us</a></li>
+              <li><i class="fa-solid fa-circle"></i><a href="">Our Tours</a></li>
+              <li><i class="fa-solid fa-circle"></i><a href="">Our Team</a></li>
+              <li><i class="fa-solid fa-circle"></i><a href="">Gallery</a></li>
+              <li><i class="fa-solid fa-circle"></i><a href="">Blog</a></li>
+            </ul>
+            <div class="footer__btn">
+              <a href="" class="btn green">Get in touch</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__header">
+        <div class="container">
+          <div class="footer__header__wrapper">
+            <div class="footer__copyright">
+              <p>© 2023 Wonder Tour. All rights reserved.</p>
+            </div>
+            <div class="footer__social">
+              <ul>
+                <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-google-plus-g"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+              </ul>
+            </div>
+            <div class="footer__policy">
+              <p>Privacy Policy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script src="./script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     
@@ -641,6 +760,27 @@
             }
           }
       });
+      var slider = tns({
+          container: '.gallery__wrapper',
+          items: 1,
+          slideBy: 'page',
+          autoplay: true,
+          axis: 'horizontal',
+          controls: false,
+          nav: true,
+          navPosition: 'bottom',
+          autoplayButtonOutput: false,
+          mouseDrag: true,
+          responsive:{
+            1024:{
+                items: 6,
+                nav: false,
+                controls: true,
+                controlsText:['<i class="fa-solid fa-chevron-left"></i>','<i class="fa-solid fa-chevron-right"></i>'],
+                slideBy: 1
+            }
+          }
+        });
   </script>
 
   </body>

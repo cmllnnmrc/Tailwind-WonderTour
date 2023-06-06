@@ -29,6 +29,11 @@ module.exports = {
         'book-img': 'url("./wonder-img/book-img.jpg")',
         'dream-bg': 'url("./wonder-img/dream-bg.jpg")',
         'discount-bg': 'url("./wonder-img/discount-img.jpg")',
+        'gallery-1': 'url("./wonder-img/gallery-1.jpg")',
+        'gallery-2': 'url("./wonder-img/gallery-2.jpg")',
+        'gallery-3': 'url("./wonder-img/gallery-3.jpg")',
+        'gallery-4': 'url("./wonder-img/gallery-4.jpg")',
+        'gallery-5': 'url("./wonder-img/gallery-5.jpg")',
       }
     },
   },
