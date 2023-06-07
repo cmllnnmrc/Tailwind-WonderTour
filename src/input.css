@@ -505,7 +505,7 @@
     }
 
     .reco__item:hover .reco__img img{
-        @apply lg:scale-[.99] transition ease-in-out duration-300
+        @apply lg:scale-[1] transition ease-in-out duration-300
     }
 
     .reco__item:first-child{
@@ -522,7 +522,7 @@
     }
 
     .reco__img img{
-        @apply lg:w-[80rem] lg:min-h-[100%] transition ease-in-out duration-300
+        @apply lg:scale-[1.1] lg:w-[80rem] lg:min-h-[100%] transition ease-in-out duration-300
     }
 
     .reco__price span{
