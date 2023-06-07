@@ -123,30 +123,32 @@
 
     <section class="hm-banner">
       <div class="hm-banner__slides">
-        <div class="hm-banner__item" id="hm-img1">
-          <div class="container">
-            <div class="hm-banner__text">
-              <h4>ENJOY THE BEST DESTINATIONS WITH OUR TRAVEL AGENCY</h4>
-              <h1>Explore <span>The World</span></h1>
-              <a href="" class="btn white-border">Get in touch</a>
-          </div>
-          </div>
-        </div>
-        <div class="hm-banner__item" id="hm-img2">
-          <div class="container">
-            <div class="hm-banner__text">
-              <h4>A TEAM OF PROFESSIONAL TRAVEL EXPERTS</h4>
-              <h1>Trust <span>Our Experience</span></h1>
-              <a href="" class="btn white-border">Get in touch</a>
+        <div class="hm-banner__content">
+          <div class="hm-banner__item bg-[url('./wonder-img/banner-img1.jpg')]">
+            <div class="container">
+              <div class="hm-banner__text">
+                <h4>ENJOY THE BEST DESTINATIONS WITH OUR TRAVEL AGENCY</h4>
+                <h1>Explore <span>The World</span></h1>
+                <a href="" class="btn white-border">Get in touch</a>
+            </div>
             </div>
           </div>
-        </div>
-        <div class="hm-banner__item" id="hm-img3">
-          <div class="container">
-            <div class="hm-banner__text">
-              <h4>BUILD YOUR NEXT HOLIDAY TRIP WITH US</h4>
-              <h1>Create <span>Your Tour</span></h1>
-              <a href="" class="btn white-border">Get in touch</a>
+          <div class="hm-banner__item bg-[url('./wonder-img/banner-img2.jpg')]">
+            <div class="container">
+              <div class="hm-banner__text">
+                <h4>A TEAM OF PROFESSIONAL TRAVEL EXPERTS</h4>
+                <h1>Trust <span>Our Experience</span></h1>
+                <a href="" class="btn white-border">Get in touch</a>
+              </div>
+            </div>
+          </div>
+          <div class="hm-banner__item bg-[url('./wonder-img/banner-img3.jpg')]">
+            <div class="container">
+              <div class="hm-banner__text">
+                <h4>BUILD YOUR NEXT HOLIDAY TRIP WITH US</h4>
+                <h1>Create <span>Your Tour</span></h1>
+                <a href="" class="btn white-border">Get in touch</a>
+              </div>
             </div>
           </div>
         </div>
@@ -329,7 +331,6 @@
               <a href="">
                 <img src="./wonder-img/hot-tour1.jpg" alt="">
               </a>
-              <span>$790</span>
             </div>
             <div class="reco__text">
               <div class="reco__text-title">
@@ -338,6 +339,9 @@
               <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><a href="">4 customer reviews</a></span>
               <p>Benidorm is a buzzing resort with a big reputation for beach holidays. Situated in sunny Costa Blanca, the town is one of the original Spanish beach resorts...</p>
               <a href="" class="btn black-border">Buy This Tour</a>
+              <div class="reco__price">
+                <span>$790</span>
+              </div>
             </div>
           </div>
           <div class="reco__item">
@@ -345,7 +349,6 @@
               <a href="">
               <img src="./wonder-img/hot-tour2.jpg" alt="">
               </a>
-              <span>$890</span>
             </div>
             <div class="reco__text">
               <div class="reco__text-title">
@@ -354,6 +357,9 @@
               <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><a href="">5 customer reviews</a></span>
               <p>The beautiful and inviting island nation of Mauritius is an ideal 'flop and drop' at the conclusion of your safari. Indulge in the delightful scents of the fragrant...</p>
               <a href="" class="btn black-border">Buy This Tour</a>
+              <div class="reco__price">
+                <span>$890</span>
+              </div>
             </div>
           </div>
         </div>
@@ -736,15 +742,15 @@
     <script type="module">
       // import {tns} from './src/tiny-slider.js';
       var slider = tns({
-        container: '.hm-banner__slides',
-        items: 1,
+          container: '.hm-banner__content',
+          items: 1,
           slideBy: 'page',
           autoplay: true,
           axis: 'vertical',
           controls: false,
           nav: true,
           autoplayButtonOutput: false,
-      });
+        });
       var slider = tns({
         container: '.blog__wrapper',
         items: 1,

@@ -20,7 +20,7 @@
 }
 
 .blog .tns-nav{
-    @apply flex items-center justify-center top-[85%] right-[35%] lg:right-[50%]
+    @apply flex items-center justify-center top-[90%] right-[35%] lg:right-[50%]
 }
 
 .gallery .tns-nav{
@@ -39,10 +39,10 @@
     @apply flex items-center justify-center;
 }
 .gallery .tns-outer{
-    @apply lg:mx-[3rem] ;
+    @apply lg:max-w-[110rem] lg:mx-auto
 }
 .tns-controls{
-    @apply absolute top-[50%] right-0 left-0 mx-[1rem] flex items-center justify-between max-w-[140rem] z-10;
+    @apply absolute top-[50%] right-0 left-0 flex items-center justify-between max-w-[135rem] px-[1rem] mx-auto z-10;
 }
 .tns-controls button{
     @apply flex items-center;
@@ -67,11 +67,11 @@
     }
 
     .white{
-        @apply py-[.8rem] px-[2rem] border-[2px] border-primary hover:border-primary hover:scale-[1.1] hover:bg-primary transition ease-in-out duration-300
+        @apply py-[.8rem] px-[2rem] border-[2px] border-primary hover:border-lgreen hover:bg-lgreen transition ease-in-out duration-300
     }
 
     .white-border{
-        @apply text-[1.1rem] text-light border-light border-[2px] py-[1rem] px-[2rem] hover:border-primary hover:scale-[1.1] hover:bg-primary transition ease-in-out duration-300
+        @apply text-[1.1rem] text-light border-light border-[2px] py-[1rem] px-[2rem] hover:border-primary hover:bg-primary transition ease-in-out duration-300
     }
 
     .green-bg{
@@ -302,18 +302,12 @@
 
     /** ---------- HOME BANNER ---------- */
 
-    #hm-img1{
-        @apply bg-banner-1 w-full flex items-center bg-cover bg-center min-h-[100vh] bg-no-repeat lg:min-h-[70vh];
-    }
-    #hm-img2{
-        @apply bg-banner-2 w-full flex items-center bg-cover bg-center min-h-[100vh] bg-no-repeat lg:min-h-[70vh];
-    }
-    #hm-img3{
-        @apply bg-banner-3 w-full flex items-center bg-cover bg-center min-h-[100vh] bg-no-repeat lg:min-h-[70vh];
-    }
-
     .hm-banner{
         @apply relative
+    }
+
+    .hm-banner__item{
+        @apply bg-cover w-full bg-no-repeat h-screen lg:h-[75vh] bg-center flex justify-center items-center;
     }
 
     .hm-banner__text h4{
@@ -340,7 +334,7 @@
     }
 
     .tours__wrapper{
-        @apply flex flex-col justify-center lg:flex lg:flex-row
+        @apply flex flex-col items-center justify-center lg:flex lg:flex-row
     }
 
     .tours__item:nth-child(2){
@@ -348,7 +342,7 @@
     }
 
     .tours__card{
-        @apply relative overflow-hidden
+        @apply relative overflow-hidden max-w-[65vw] min-h-[25rem] lg:max-w-[20vw] lg:min-h-[23rem]
     }
 
     .tours__card img{
@@ -507,11 +501,11 @@
 
 
     .reco__item{
-        @apply relative lg:flex lg:gap-x-[5rem] lg:items-center lg:border-[1px] lg:max-w-[100vw] lg:overflow-hidden
+        @apply relative lg:flex lg:gap-x-[5rem] lg:items-center lg:border-[1px] lg:max-w-[100vw] lg:overflow-hidden lg:min-h-[20rem]
     }
 
     .reco__item:hover .reco__img img{
-        @apply lg:scale-[1.05] transition ease-in-out duration-300
+        @apply lg:scale-[.99] transition ease-in-out duration-300
     }
 
     .reco__item:first-child{
@@ -520,23 +514,22 @@
 
 
     .reco__img{
-        @apply overflow-hidden
+        @apply relative overflow-hidden 
+    }
+
+    .reco__img a{
+        @apply lg:min-w-[70rem] 
     }
 
     .reco__img img{
-        @apply lg:w-[70rem] lg:max-h-[100%] transition ease-in-out duration-300
+        @apply lg:w-[80rem] lg:min-h-[100%] transition ease-in-out duration-300
     }
 
-    .place__img p::before{
-        @apply 
-    }
-
-
-    .reco__img span{
+    .reco__price span{
         @apply absolute overflow-hidden top-0 right-0 px-[1rem] py-1 font-bold text-white bg-transparent z-[1]
     }
 
-    .reco__img span:before{
+    .reco__price span:before{
         @apply absolute right-[-2rem] top-0 bg-primary block content-[""] w-[5.5rem] h-[2rem] z-[-1] origin-bottom-left skew-x-[45deg]
     }
 
@@ -778,23 +771,27 @@
     }
 
     .blog__card{
-        @apply flex flex-col justify-center items-center overflow-hidden translate-x-[1rem]
+        @apply flex flex-col justify-center items-center overflow-hidden
     }
 
     .blog__card:hover .blog__text ul{
-        @apply flex
+        @apply flex transition-all duration-300
+    }
+
+    .blog__card{
+        @apply relative
     }
 
     .blog__card:hover img{
-        @apply lg:scale-[1.05]
+        @apply lg:scale-[.98]
     }
 
     .blog__card img{
-        @apply w-[85vw] max-h-[40vh] lg:w-[25vw] lg:max-h-[40vh]
+        @apply max-w-[85vw] max-h-[40vh] lg:max-w-[28vw] lg:max-h-[45vh] lg:gap-x-[1rem]
     }
 
     .blog__text{
-        @apply bg-light flex flex-col items-center justify-center text-center translate-x-[1.3rem] p-[1rem] w-[24rem] translate-y-[-5rem] shadow-[0_0_10px_0_rgba(0,0,0,0.27)] lg:w-[27.5rem] lg:min-h-[12rem]
+        @apply bg-light flex flex-col items-center justify-center text-center mx-[1.5rem] lg:mx-[2rem] p-[1rem] max-w-[24rem] translate-y-[-5rem] shadow-[0_0_10px_0_rgba(0,0,0,0.27)] lg:max-w-[27.5rem] lg:min-h-[12rem] transition-all duration-300
     }
 
     .blog__text h4{
@@ -806,7 +803,7 @@
     }
 
     .blog__text ul{
-        @apply flex items-center justify-center gap-x-[1rem] lg:hidden
+        @apply flex items-center justify-center gap-x-[1rem] lg:hidden lg:transition-all duration-300
     }
 
     .blog__text ul li:first-child{
@@ -868,7 +865,7 @@
 	}
 
 	.gallery__icon i{
-		@apply absolute left-[3%] top-[2%] min-w-[75vw] min-h-[27vh] border-[1px] flex justify-center items-center border-light lg:min-w-[14.2vw] lg:min-h-[20vh] lg:top-[1%] lg:hidden
+		@apply absolute left-[3%] top-[2%] min-w-[75vw] min-h-[27vh] border-[1px] flex justify-center items-center border-light lg:min-w-[14.2vw] lg:min-h-[20vh] lg:top-[1%] lg:hidden hover:text-dark hover:text-opacity-60 transition ease-in-out duration-300
 	}
 
 	.gallery__content{
@@ -908,11 +905,15 @@
     }
 
     .footer__item:last-child ul{
-        @apply flex flex-wrap justify-center items-center w-[25rem] lg:justify-start lg:items-start lg:flex lg:flex-col lg:h-[7rem] lg:gap-x-[1rem]
+        @apply flex flex-wrap justify-center w-[25rem] lg:justify-start lg:items-start lg:flex lg:flex-col lg:h-[7rem] lg:gap-x-[1rem]
     }
 
     .footer__item:last-child ul li{
         @apply mr-[1rem]
+    }
+
+    .footer__item:last-child ul li:last-child{
+        @apply my-[1rem]
     }
 
     .footer__item:last-child ul li i{
@@ -973,5 +974,9 @@
 
     .footer__social ul{
         @apply flex items-center gap-x-[1rem]
+    }
+
+    .footer__social ul li a{
+        @apply hover:text-light transition ease-in-out duration-300
     }
 }
