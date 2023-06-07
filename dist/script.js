@@ -28,7 +28,7 @@ const tabNav = document.querySelectorAll(".tab-nav-link");
 const tabContent = document.querySelectorAll(".about__text__content");
 tabNav.forEach((nav) => {
   nav.addEventListener("click", () => {
-    removeActiveStar();
+    removeActiveNav();
     nav.classList.add("active");
     const activeContent = document.querySelector(`#${nav.id}-content`);
     removeActiveContent();
@@ -36,7 +36,7 @@ tabNav.forEach((nav) => {
   });
 });
 
-function removeActiveStar() {
+function removeActiveNav() {
   tabNav.forEach((nav) => {
     nav.classList.remove("active");
   });

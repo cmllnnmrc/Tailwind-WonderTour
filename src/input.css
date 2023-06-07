@@ -112,10 +112,10 @@
     .header__nav__container{
         @apply lg:bg-lblue
     }
-
+    
 
     .header__actions{
-        @apply bg-light duration-500 absolute flex flex-col h-[100vh] w-[60%] overflow-y-scroll left-[-100rem] overflow-hidden text-center lg:text-center lg:bg-transparent lg:relative lg:overflow-visible lg:h-[100%] lg:flex-row-reverse lg:items-center lg:justify-between lg:w-full lg:max-w-[75rem] lg:mx-auto lg:left-0 transition-all;
+        @apply bg-light duration-500 absolute flex flex-col h-[100vh] w-[60%] overflow-y-scroll left-[-100rem] overflow-hidden text-center lg:text-center lg:bg-transparent lg:relative lg:overflow-visible lg:h-[100%] lg:flex-row-reverse lg:items-center lg:justify-between lg:w-full lg:max-w-[75rem] lg:mx-auto lg:left-0 transition-all z-[999];
     }
 
     .header__actions.open{
