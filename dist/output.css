@@ -2579,11 +2579,30 @@ video {
     --tw-scale-x: .99;
     --tw-scale-y: .99;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    --tw-brightness: brightness(.4);
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
   }
 }
 
+.gallery__item:hover .gallery__icon {
+  position: absolute;
+  top: 1rem;
+  display: flex;
+  height: 85%;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(254 254 254 / var(--tw-border-opacity));
+  background-color: rgb(21 21 21 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.2;
+}
+
 .gallery__content img {
-  width: 25rem;
+  width: 80%;
+  --tw-brightness: brightness(.4);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
@@ -2592,76 +2611,47 @@ video {
 @media (min-width: 1024px) {
   .gallery__content img {
     width: 18rem;
+    --tw-brightness: brightness(1);
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
   }
 }
 
-.gallery__icon:hover {
-  transition-duration: 300ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@media (min-width: 1024px) {
-  .gallery__icon:hover {
-    left: 3%;
-    min-width: 14.8vw;
-    background-color: rgb(21 21 21 / var(--tw-bg-opacity));
-    --tw-bg-opacity: 0.4;
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
-  }
+.gallery__content {
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .gallery__icon {
   position: absolute;
-  top: 0;
-  left: 9%;
-  min-height: 90vh;
-  min-width: 80vw;
+  top: 1rem;
+  display: flex;
+  height: 88%;
+  width: 75%;
+  align-items: center;
+  justify-content: center;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(254 254 254 / var(--tw-border-opacity));
   background-color: rgb(21 21 21 / var(--tw-bg-opacity));
-  --tw-bg-opacity: 0.4;
-  font-size: 2rem;
-  --tw-text-opacity: 1;
-  color: rgb(254 254 254 / var(--tw-text-opacity));
+  --tw-bg-opacity: 0.2;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media (min-width: 1024px) {
   .gallery__icon {
-    left: 3%;
-    min-width: 14.8vw;
-    --tw-bg-opacity: 0;
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
-  }
-
-  .gallery__icon:hover i {
-    top: 1%;
-    display: flex;
-    min-height: 20vh;
-    min-width: 14vw;
-    justify-content: center;
+    display: none;
   }
 }
 
 .gallery__icon i {
-  position: absolute;
-  left: 3%;
-  top: 2%;
-  display: flex;
-  min-height: 27vh;
-  min-width: 75vw;
-  align-items: center;
-  justify-content: center;
-  border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgb(254 254 254 / var(--tw-border-opacity));
+  font-size: 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(254 254 254 / var(--tw-text-opacity));
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
@@ -2670,22 +2660,7 @@ video {
 }
 
 .gallery__icon i:hover {
-  color: rgb(21 21 21 / var(--tw-text-opacity));
   --tw-text-opacity: 0.6;
-}
-
-@media (min-width: 1024px) {
-  .gallery__icon i {
-    top: 1%;
-    display: none;
-    min-height: 20vh;
-    min-width: 14.2vw;
-  }
-}
-
-.gallery__content {
-  display: flex;
-  justify-content: center;
 }
 
 /** ---------- FOOTER ---------- */
